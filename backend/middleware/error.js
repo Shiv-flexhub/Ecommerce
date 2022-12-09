@@ -15,4 +15,5 @@ module.exports = (err, req, res, next)=>{
         message:err.message, //error:err.stack(for displaying the exact line where the error has occured)
         statusCode:err.statusCode
     });
+   
 };
