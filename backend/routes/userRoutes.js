@@ -1,5 +1,5 @@
 const express = require("express")
-const {registerUser, loginUser, logout} = require("../controllers/userController")
+const {registerUser, loginUser, logout, forgotPassword, resetPassword} = require("../controllers/userController")
 
 
 const router = express.Router() 
@@ -10,6 +10,11 @@ router.route("/register").post(registerUser);
 router.route("/login").post(loginUser);
 //route to logout the user
 router.route("/logout").post(logout);
+//route for forgot password
+router.route("/password/forgot").post(forgotPassword);
+//route for reset password
+router.route("/password/reset/:token").put(resetPassword);
+
 
 
 
