@@ -23,7 +23,7 @@ module.exports = (err, req, res, next)=>{
     }
 
     //jwt expire error
-     if(err.name=="TokenExpiredEror"){
+     if(err.name=="TokenExpiredError"){
         const message = `Json Web token is expired, Try again!`;
         err = new ErrorHandler(message,400)
     }
